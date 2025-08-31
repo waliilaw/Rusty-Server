@@ -1,6 +1,17 @@
 [package]
 name = "Rusty-Server"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
+axum = "0.6"           # Web framework
+tokio = { version = "1", features = ["full"] }  # Async runtime
+serde = { version = "1", features = ["derive"] } # Serialization
+serde_json = "1"       # JSON handling
+tower = "0.4"          # HTTP middleware
+tracing = "0.1"        # Logging
+tracing-subscriber = "0.3" # Log subscriber
+anyhow = "1"           # Error handling
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.4", features = ["v4", "serde"] }
+handlers = "0.10.0"
